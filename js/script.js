@@ -1,9 +1,19 @@
+     $(document).ready(function(){
+$('ul.dropdown-menu.mega-dropdown-menu').on('click', function(event){
+    //The event won't be propagated to the document NODE and 
+    // therefore events delegated to document won't be fired
+    event.stopPropagation();
+});
+
 $(document).ready(function () {
 $(".navbar-nav li a").click(function(event) {
 $(".navbar-collapse").collapse('hide');
 });
 });
 
+
+
+    });
 var activeZoom;
 
 images = document.getElementsByTagName("img");
